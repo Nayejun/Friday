@@ -26,7 +26,7 @@ graph TD
     C --> D[Sentence-transformers로 임베딩]
     D --> E[indexedChunks.json 저장]
     F[사용자 질문 입력] --> G[질문 임베딩]
-    G --> H[저장된 chunk와 유사도 계산]
+    G --> H[저장된 chunk와 코사인 유사도 계산]
     H --> I[상위 8개 context 추출]
     I --> J[Claude에 프롬프트 전달]
     J --> K[응답 생성 → 프론트로 전달]
@@ -39,7 +39,7 @@ graph TD
 ### 1. 프로젝트 클론 및 의존성 설치
 
 ```bash
-git clone https://github.com/Nayejun/friday.git
+git clone https://github.com/Nayejun/Friday.git
 cd friday
 npm install
 ```
@@ -158,4 +158,3 @@ MIT License
 ## 기여
 
 Pull Request와 Issue는 언제든 환영합니다.
-# Friday
